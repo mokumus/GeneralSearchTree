@@ -1,0 +1,185 @@
+************************************PART 1************************************
+**********************************SCENARIO 1**********************************
+Adding new children to william
+royalTree.addAll("William I", Robert, William);
+
+Left nodes of: William I
+1. Robert
+2. William
+
+Print tree:
+William I
+ Robert
+  William
+   null
+   null
+  null
+ null
+******************************************************************************
+**********************************SCENARIO 2**********************************
+Adding new siblings to Robert
+royalTree.addAllSiblings("Robert",WilliamII,Adela,HenryI);
+
+Right nodes of: Robert
+1. William II
+2. Adela
+3. Henry I
+
+Print tree:
+William I
+ Robert
+  William
+   null
+   null
+  William II
+   null
+   Adela
+    null
+    Henry I
+     null
+     null
+ null
+******************************************************************************
+*********************************SCENARIO 3.1*********************************
+Adding new children and siblings...
+            royalTree.add("Adela", Stephen);
+            royalTree.add("Henry I", WilliamIII);
+            royalTree.addSibling("William III",Matilda);
+            royalTree.addAll("Matilda", HenryII,Henry);
+            royalTree.addAllSiblings("Henry", RichardI,Geoffrey,John);
+
+Print tree:
+William I
+ Robert
+  William
+   null
+   null
+  William II
+   null
+   Adela
+    Stephen
+     null
+     null
+    Henry I
+     William III
+      null
+      Matilda
+       Henry II
+        Henry
+         null
+         Richard I
+          null
+          Geoffrey
+           null
+           John
+            null
+            null
+        null
+       null
+     null
+ null
+******************************************************************************
+*********************************SCENARIO 3.2*********************************
+Adding new children and siblings...
+            royalTree.add("Geoffrey",Arthur);
+            royalTree.addAll("John",HenryIII,EdwardI,EdwardII,EdwardIII);
+            royalTree.addSibling("Henry III",Richard);
+            royalTree.addSibling("Edward I", EdmundI);
+            royalTree.addAllSiblings("Edward II", Thomas, EdmundII);
+
+Print tree:
+William I
+ Robert
+  William
+   null
+   null
+  William II
+   null
+   Adela
+    Stephen
+     null
+     null
+    Henry I
+     William III
+      null
+      Matilda
+       Henry II
+        Henry
+         null
+         Richard I
+          null
+          Geoffrey
+           Arthur
+            null
+            null
+           John
+            Henry III
+             Edward I
+              Edward II
+               Edward III
+                null
+                null
+               Thomas
+                null
+                Edmund II
+                 null
+                 null
+              Edmund I
+               null
+               null
+             Richard
+              null
+              null
+            null
+        null
+       null
+     null
+ null
+******************************************************************************
+*********************************SCENARIO 4.1*********************************
+Search for a person using levelorder:
+Adela =? William I
+Adela =? Robert
+Adela =? William II
+Adela =? Adela
+Search for a person using postorder:
+Adela =? William I
+Adela =? Robert
+Adela =? William
+Adela =? William II
+Adela =? Adela
+******************************************************************************
+*********************************SCENARIO 4.2*********************************
+Search for a person using levelorder:
+Henry III =? William I
+Henry III =? Robert
+Henry III =? William II
+Henry III =? Adela
+Henry III =? Henry I
+Henry III =? William III
+Henry III =? Matilda
+Henry III =? Henry II
+Henry III =? Henry
+Henry III =? Richard I
+Henry III =? Geoffrey
+Henry III =? John
+Henry III =? Henry III
+Search for a person using postorder:
+Henry III =? William I
+Henry III =? Robert
+Henry III =? William
+Henry III =? William II
+Henry III =? Adela
+Henry III =? Stephen
+Henry III =? Henry I
+Henry III =? William III
+Henry III =? Matilda
+Henry III =? Henry II
+Henry III =? Henry
+Henry III =? Richard I
+Henry III =? Geoffrey
+Henry III =? Arthur
+Henry III =? John
+Henry III =? Henry III
+
+Process finished with exit code 0
